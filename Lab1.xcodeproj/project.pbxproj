@@ -21,6 +21,7 @@
 		202B672919932B56004FEBE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202B670B19932B56004FEBE7 /* UIKit.framework */; };
 		202B673119932B56004FEBE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 202B672F19932B56004FEBE7 /* InfoPlist.strings */; };
 		202B673319932B56004FEBE7 /* Lab1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 202B673219932B56004FEBE7 /* Lab1Tests.m */; };
+		202B673E19932EA8004FEBE7 /* YoCatchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 202B673D19932EA8004FEBE7 /* YoCatchModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		202B672E19932B56004FEBE7 /* Lab1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lab1Tests-Info.plist"; sourceTree = "<group>"; };
 		202B673019932B56004FEBE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		202B673219932B56004FEBE7 /* Lab1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab1Tests.m; sourceTree = "<group>"; };
+		202B673C19932EA8004FEBE7 /* YoCatchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoCatchModel.h; sourceTree = "<group>"; };
+		202B673D19932EA8004FEBE7 /* YoCatchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoCatchModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				202B671919932B56004FEBE7 /* Main.storyboard */,
 				202B671C19932B56004FEBE7 /* ViewController.h */,
 				202B671D19932B56004FEBE7 /* ViewController.m */,
+				202B673C19932EA8004FEBE7 /* YoCatchModel.h */,
+				202B673D19932EA8004FEBE7 /* YoCatchModel.m */,
 				202B671F19932B56004FEBE7 /* Images.xcassets */,
 				202B670E19932B56004FEBE7 /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				202B671E19932B56004FEBE7 /* ViewController.m in Sources */,
+				202B673E19932EA8004FEBE7 /* YoCatchModel.m in Sources */,
 				202B671819932B56004FEBE7 /* AppDelegate.m in Sources */,
 				202B671419932B56004FEBE7 /* main.m in Sources */,
 			);
