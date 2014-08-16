@@ -83,9 +83,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
     [self changeMsg:(textField)];
-    
     return YES;
 }
 
@@ -96,10 +94,7 @@
 
 
 - (IBAction)showMessageButtonPressed:(id)sender {
-    
     [self changeMsg:(sender)];
-    
-    NSLog(@"showMessageButtonPressed got pressed");
 }
 
 
