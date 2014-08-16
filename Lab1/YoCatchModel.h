@@ -22,7 +22,6 @@
 
 + (NSString*) defaultYoMessage;
 
-
 /** Instance method for adding data into the history array */
 
 // Your answer to q7 here
@@ -33,6 +32,6 @@
 
 - (instancetype)initWithUsername:(NSString *) username;
 
-- (NSString *)description; 
+- (NSString *)description;
 
 @end

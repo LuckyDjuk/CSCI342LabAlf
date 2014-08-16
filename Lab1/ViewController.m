@@ -11,10 +11,10 @@
 
 @interface ViewController ()
 
-
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad
 {
@@ -43,14 +43,70 @@
     }
     
     NSLog(@"%@",[yo description]);
+    
+    self.greetingInput.delegate = self;
+    self.nameInput.delegate = self;
+    self.greetingInput.text = @"Yo";
+    self.nameInput.text = @"dude";
 }
+
++ (UIColor* ) randomColor {
+    // Code below is retrieved from https://gist.github.com/kylefox/1689973
+    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
+    UIColor *color = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    return color;
+}
+
+- (id) changeMsg:(id)sender{
+    NSString *msg=[NSString stringWithFormat:@"%@\n%@",self.greetingInput.text,self.nameInput.text];
+    [self.msg setText:msg];
+    [self.view endEditing:YES];
+    
+    //self.greetingInput.backgroundColor = [ViewController randomColor];
+    //self.nameInput.backgroundColor = [ViewController randomColor];
+
+    [UIView animateWithDuration:0.5 animations:^{
+    
+        self.view.backgroundColor = [ViewController randomColor];
+        self.msg.textColor = [ViewController randomColor];
+    
+        while ([self.view.backgroundColor isEqual:self.msg.textColor]) {
+            self.view.backgroundColor = [ViewController randomColor];
+            self.msg.textColor = [ViewController randomColor];
+        }
+    }];
+   
+    
+    return self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    [self changeMsg:(textField)];
+    
+    return YES;
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.greetingInput resignFirstResponder];
+    [self.nameInput resignFirstResponder];
+}
+
+
+- (IBAction)showMessageButtonPressed:(id)sender {
+    
+    [self changeMsg:(sender)];
+    
+    NSLog(@"showMessageButtonPressed got pressed");
+}
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

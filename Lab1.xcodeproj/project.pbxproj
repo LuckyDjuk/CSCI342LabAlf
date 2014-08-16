@@ -462,6 +462,7 @@
 				202B673819932B56004FEBE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		202B673919932B56004FEBE7 /* Build configuration list for PBXNativeTarget "Lab1Tests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +471,7 @@
 				202B673B19932B56004FEBE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

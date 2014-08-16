@@ -19,7 +19,6 @@
     return self;
 }
 
-
 - (instancetype) initWithUsername:(NSString *) username {
     self = [super init];
     if (self != nil) {
@@ -29,7 +28,6 @@
     return self;
 }
 
-
 + (NSString *) defaultYoMessage{
     return @"Yo";
 }
@@ -38,12 +36,10 @@
     [_historyArray addObject:entry];
 }
 
-
 - (NSString *)description {
     NSString *layout = [NSString stringWithFormat:@"Username: %@ \n HistoryArray: %@ \n", self.username, self.historyArray];
     return layout;
     
 }
-
 
 @end
