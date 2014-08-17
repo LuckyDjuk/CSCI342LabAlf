@@ -1,0 +1,22 @@
+Git Questions
+Place the answers into a text file labelled git.txt
+1. We’re using git as our versioning system for iOS and Android projects. What is git, and what makes it different to other versioning systems? 
+
+Answer: Git is a free and open source distributed version control system. The main feature that makes Git different is that it is decentralized, which in practical means that you clone the centralized repository on o your computer which you can commit to. You push when you are done with the implementation.  Since you can commit to your local repository you still have the benefits from source control. When you get a Internet connection you will be able to push your version onto the central repository.
+
+2.What is a branch? When is it the right time to create a branch?
+
+Answer: A branch is a duplicate of your local copy which in turn become its own version of the master branch. You will be able to work towards a branch while you are trying to implement a new feature. When you are done with this process you then merge your branch with the master branch that then in turn will distribute your feature to others in your project group. When you are going to experiment with your project or implement a new feature, branching is a good idea. Master branch is the version that is set in production. 
+
+3.If you’ve forgotten to setup a git repository in the IDE, what is the command to create a git repository  and add all created files 
+
+Answer: The command to setup a git repository is “git init” and to add files you write “git add –A” to add all the files in a directory
+
+4.Sometimes you don’t want to include all files in a repository, how do you avoid this? 
+
+Answer: Either you add all the files specifically with “git add “filename goes here”“ or if you files with the same tag you can do “*.txt” or similar options.
+
+5.Once you’ve made changes to a file/s, what’s the command to save these into the repository? When is  it recommended that you do this? 
+
+Answer: git commit –a –m “A message regarding your change” and you should run your code before you commit to see if it compiles and if you automatic tests you need to run them before you push the changes to the centralized copy so that everyone else can retrieve this version of the file.
+
